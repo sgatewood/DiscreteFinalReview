@@ -29,8 +29,9 @@ class GuiFix{ // Used to standardize a GUI for all screen resolutions (including
     UIManager.put("Spinner.font", new FontUIResource(new Font("Dialog", Font.PLAIN, 120)));
     UIManager.put("Slider.font", new FontUIResource(new Font("Dialog", Font.PLAIN, fontSize)));
     UIManager.put("Slider.horizontalSize", new Dimension(jFrameWidth/3,jFrameWidth/3));
+    UIManager.put("JRadioButton.icon",90);
 
-    frame.setBounds(screenDimension.width/4, screenDimension.height/4, jFrameWidth,jFrameHeight);
+    frame.setBounds(screenDimension.width/4, screenDimension.height/10, jFrameWidth,jFrameHeight);
   }
 
   public int getFontSize(){
