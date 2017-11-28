@@ -29,6 +29,7 @@ class Gui{
 
   // Makes the basic interface
   public JFrame makeBasicInterface(){
+
     JFrame frame = new JFrame();
     //*********************RESCALING******************************
     GuiFix fixer = new GuiFix();
@@ -36,8 +37,9 @@ class Gui{
     //************************************************************
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setSize(Gui.SCALE*4/5,Gui.SCALE*2/5);
+    frame.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("2102.ico")));
     top = new JPanel();
-    top.add(new JLabel("Discrete Math Final Exam Review"));
+    top.add(new JLabel("<html>CS 2102 Final Review Game</html>"));
     bottom = new JPanel();
     bottom.setLayout(new GridLayout(4,2));
 
@@ -84,12 +86,13 @@ class Gui{
     }finally{
       frame.setVisible(true);
     }
+
+    // If we need output: https://stackoverflow.com/questions/5711084/java-runtime-getruntime-getting-output-from-executing-a-command-line-program
   }
 
   public class Wop implements ActionListener{
     public void actionPerformed(ActionEvent e){
-      System.out.println("WOP not implemented yet. Enjoy this python game instead");
-      runCommand("py -3 flappybird.py");
+      runCommand("java Wop_Gui");
     }
   }
 
@@ -114,6 +117,8 @@ class Gui{
   public class State_machines implements ActionListener{
     public void actionPerformed(ActionEvent e){
       System.out.println("State_machines not implemented yet");
+      runCommand("py -3 flappybird.py");
+
     }
   }
 
@@ -136,6 +141,7 @@ class Gui{
   }
 
   public static void main(String[] args) {
+    Wop_Gui q; // Just to recompile
     new Gui();
   }
 }
