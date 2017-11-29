@@ -110,7 +110,7 @@ class Gui{
 
   public class Functions_relations implements ActionListener{
     public void actionPerformed(ActionEvent e){
-      System.out.println("Functions_relations not implemented yet");
+      runCommand("java Func_Gui");
     }
   }
 
@@ -141,7 +141,7 @@ class Gui{
   }
 
   public static void main(String[] args) {
-    Wop_Gui q; // Just to recompile
+    Wop_Gui q; Func_Gui qq; // Just to recompile
     new Gui();
   }
 }
